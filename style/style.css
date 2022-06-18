@@ -3,40 +3,95 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 body{
-   background-color: #0F5959;
+    
+    background-color: rgb(12, 11, 11);
+
 }
-#navigation{
-    border: 1px solid black;
-    font-family: Trebuchet MS;
+#hero-image{
+    margin-top: -80px;
     width: 100%;
-   background-color: #0A3A40;
-    height: 60px;
+    height: 58.3rem;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/beach.jpeg);
+    background-size: cover;
+    background-position-y: 60%;
+}
+
+#navigation{
+    display: grid;
+    margin-left: 50%;
+    grid-template-columns: repeat(8, 1fr);
+    padding-top: 10px;
+    font-family: 'Permanent Marker', cursive;
+    width: 20%;
+    height: 80px;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .navigationBtn{
-    position: relative;
     display: inline-block;
+    grid-template-columns: repeat(7, 1fr);
+    transform: translateY(10px);
+    transition: .2s all ease;
     text-decoration: none;
-    transition: background-color .3s;
-    width: 20%;
+    width: max-content;
     color: white;
     height: 60px;
     padding: 15px;
 
 }
+.navigationBtn:first-child{
+    font-size: 2rem;
+    width: 4%;
+    margin-left: -410%;
+}
 .navigationBtn:hover{
-    background-color: #042326;
+    transform: translateY(0px);
+    color: black;
  
 }
 body p{
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 2%;
     font-size: 200%;
     font-weight: bold;
     font-family: Trebuchet MS;
+}
+.main-content {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    padding-top: 20%;   
+}
+
+.main-content p{
+    font-family: 'Permanent Marker', cursive;  
+    bottom: 40px;
+    text-align: center;
+}
+
+.typing{
+    position: relative;
+}
+.typing::after{
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    border-right: 2px solid white;
+    margin-right: 1px;
+    animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
