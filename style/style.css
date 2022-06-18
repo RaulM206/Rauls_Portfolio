@@ -69,14 +69,29 @@ body p{
 }
 
 .main-content p{
+    transform: translateY(10px);
+    transition: .2s all ease;
     font-family: 'Permanent Marker', cursive;  
     bottom: 40px;
     text-align: center;
 }
 
+.main-content p:hover{
+    transform: translateY(0px);
+    color: black;
+}
+
 .typing{
+   
+    transform: translateY(10px);
+    transition: .2s all ease;
     position: relative;
 }
+.typing:hover{
+    transform: translateY(0px);
+    color: black;
+}
+
 .typing::after{
     content:"";
     position: absolute;
