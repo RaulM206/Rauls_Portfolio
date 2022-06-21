@@ -131,6 +131,7 @@ body p{
 
 
 .projects{
+    border-radius: 10px;
     transform: translateY(10px);
     transition: .1s all ease;
     background-color: white;
@@ -139,6 +140,8 @@ body p{
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    text-decoration: none;
+    color: black
 }
 
 .projects:hover{
